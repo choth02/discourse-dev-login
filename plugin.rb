@@ -10,7 +10,7 @@ PLUGIN_NAME ||= 'discourse-dev-login'.freeze
 
 register_asset "stylesheets/dev-login.scss"
 
-if Rails.env.development?
+if Rails.env.production?
   after_initialize do
     module ::DiscourseDevLogin
       class Engine < ::Rails::Engine
